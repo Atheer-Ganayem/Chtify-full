@@ -2,7 +2,7 @@
 const nextConfig = {
   env: {
     AWS: "https://chatify-project.s3.eu-central-1.amazonaws.com/",
-    API: "chtify-full-production.up.railway.app",
+    API: "https://chtify-full-production.up.railway.app",
   },
   images: {
     remotePatterns: [
