@@ -16,7 +16,10 @@ export default function RootLayout({
   chat: React.ReactNode;
   users: React.ReactNode;
 }>) {
-  const token = cookies().get("next-auth.session-token")?.value || "";
+  const token =
+    cookies().get("__Secure-next-auth.session-token")?.value ||
+    cookies().get("next-auth.session-token")?.value ||
+    "";
 
   return (
     <SocketProvider token={token}>

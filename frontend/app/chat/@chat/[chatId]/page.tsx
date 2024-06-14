@@ -57,7 +57,10 @@ const ChatByIdPage: React.FC<Props> = async ({ params }) => {
     redirect("/auth?mode=login");
   }
 
-  const token = cookies().get("next-auth.session-token")?.value || "";
+  const token =
+    cookies().get("__Secure-next-auth.session-token")?.value ||
+    cookies().get("next-auth.session-token")?.value ||
+    "";
 
   await connectDB();
   if (!isValidObjectId(params.chatId)) {
